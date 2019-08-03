@@ -1,0 +1,491 @@
+/*Start Font*/
+@font-face {
+    font-family: 'Roboto';
+    src: url(../font/RobotoCondensed-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url(../font/RobotoCondensed-Light.ttf);
+  }
+/*End Font*/
+
+/*Start global styles*/
+
+body{
+    font-family: Roboto;
+    margin: 0;
+    color: #fff;
+    background-image: url("../images/main-background.png");
+    background-color: #2b2b2b;
+    background-size: cover;
+    padding: 0 3%;
+}
+
+
+
+body a{
+    color: #fff;
+    text-decoration: none;
+}
+body li{
+    list-style: none;
+    display: inline-block;
+}
+body input{
+    color: #fff;
+}
+/*End global styles*/
+
+
+/*Start navigation and logo*/
+
+/*START Desktop css*/
+@media screen and (min-width: 981px){
+.menu{
+    width: 100%;
+    padding: 0.1%;
+    display: inline-block;
+}
+
+    .logo{
+        display: inline-block;
+        width: 10%;
+        font-size: 1.3em;
+        text-align: left;
+        font-weight: 400;
+    }
+        .logo p{
+            margin-top: 6%;
+            margin-bottom: 0;
+        }
+
+    .link-menu{
+        width: 79%;
+        margin-right: 10%;
+        display: inline-block;
+    }
+    #middle-menu{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+        #middle-menu ul{
+            padding: 0;
+        }
+
+        #middle-menu a{
+            font-size: 1.05em;
+            font-weight: 400;
+            text-decoration: none;
+            padding: 0px 2vw;
+        }
+
+            #middle-menu a:first-child { 
+                padding-left: 0;
+            }
+
+
+
+    #mobile-menu{
+        display: none;
+        cursor: pointer;
+        position: relative;
+        float: right;
+    }
+
+        #mobile-menu div{
+                width: 23px;
+                height: 2px;
+                background-color: #fff;
+                margin-top: 6px;
+        }
+    }
+/*END Desktop css*/
+
+
+
+
+/*Start Mobile version*/
+
+@media screen and (max-width: 980px){
+.menu{
+    width: 100%;
+    padding: 0.1%;
+    display: inline-block;
+    font-size: 3.5vw;
+}
+
+    .logo{
+        display: inline-block;
+        width: 100%;
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    
+
+    .hidden li{
+        height: 0 !important;
+        opacity: 0 !important;
+    }
+
+    #middle-menu{
+        text-align: center;
+        width: 80%;
+        margin-left: 9.9%;
+    }
+        #middle-menu ul{
+            padding: 0;
+            width: 100%;
+            margin-top: 0;
+        }
+        #middle-menu li{
+            padding: 4px;
+            border: 1px solid rgb(255,255,255, 0.3);
+            width: 52%;
+            height: 4%;
+            background-color: #2b2b2b;
+            font-size: 2vw;
+            transition-property: height, opacity;
+            transition-duration: 2s,.8s;
+        }
+
+        #middle-menu a{
+            font-size: 1.05em;
+            font-weight: 400;
+            text-decoration: none;
+            padding: 0px 2vw;
+        }
+
+            #middle-menu a:first-child { 
+                padding-left: 0;
+            }
+        
+
+
+
+    #mobile-menu{
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        margin-left: 48.2%;
+        margin-bottom: 5%;
+        float: none;
+        margin-bottom: 5px;
+    }
+
+        #mobile-menu div{
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin-top: 6px;
+            transition: transform .6s ease;
+        }
+            .active div:first-child{
+                -webkit-transform: rotate(45deg) translate(-9px, 6px);
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
+            .active div:not(:first-child):not(:last-child){
+                display:none;
+            }
+            .active div:last-child{
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);    
+                margin-top: 18.3px !important;
+                margin-left: -2px !important;
+            }
+}
+/*End Mobile version*/
+/*End navigation and logo*/
+
+
+
+/*START Main Content*/
+
+/*START Desktop css*/
+@media screen and (min-width: 981px){
+
+.main-div{
+    margin-top: 5%;
+    margin-bottom: 6.1%;
+}
+
+.main-div-left{
+    margin-top: 7px;
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+    .main-div-left .header{
+        margin: 0 20%;
+        font-size: 4vw;
+    }
+
+    .main-div-left .content{
+        margin: 3% 20%;
+        font-size: 1.5vw;
+        color: rgb(255,255,255,.65);
+    }
+
+
+
+
+.main-div-right{
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+    .main-div-right .header{
+        font-family: Roboto-Light;
+        font-size: 1.1vw;
+        text-align: center;
+        margin: 0 15% 3%;
+        letter-spacing: .7;
+    }
+
+    .main-div-right form{
+        text-align: center;
+        margin: 0 15%;
+    }
+
+
+
+
+    .main-div-right input{
+        width: 100%;
+        font-size: 1.2vw;
+        background-color: rgb(43, 43, 43, 0.7);
+        border: 1px solid rgb(255,255,255, 0.3);
+        height: 8.3vh;
+        padding-left: 0.8vw;
+    }
+        .main-div-right input:hover {
+            border: 1px solid rgb(255,255,255);
+            background-color: rgb(43, 43, 43) !important;
+            transition: border 1.5s; transition: background-color .5s ease;
+        }
+        .main-div-right input:focus {
+            border: 1px solid rgb(255,255,255);
+            background-color: rgb(43, 43, 43) !important;
+            transition: border 1.5s; transition: background-color .5s ease;
+        }
+        .main-div-right input:first-child{
+            border-radius:5px 5px 0 0;
+        }
+        .main-div-right input:last-child{
+            border-radius: 0 0 5px 5px;
+        }
+        ::placeholder{
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .submit{
+            background-color: #2c99ed !important;
+            border: none !important;
+        }
+            .submit:hover{
+                background-color: #1868a7 !important;
+                transition: background-color .5s ease;
+                cursor: pointer;
+            }
+    
+
+
+
+    .main-div-right p{
+        color: rgb(255,255,255,.4);
+        font-size: 1vw;
+        text-align: center;
+    }
+        .main-div-right a{
+            color: rgb(255,255,255);
+            text-decoration: none;
+            font-size: 1vw;
+        }
+}
+/*END Desktop css*/
+
+
+
+/* START Responsive Queries */
+@media screen and (max-width: 980px){
+
+    .main-div{
+        margin-top: 5%;
+        margin-bottom: 6.1%;
+    }
+  
+    
+    .main-div-left{
+        margin-top: 7px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+        .main-div-left .header{
+            margin: 0 20%;
+            font-size: 6vw;
+        }
+    
+        .main-div-left .content{
+            margin: 3% 20%;
+            font-size: 2.6vw;
+            color: rgb(255,255,255,.65);
+            margin-bottom: 6%;
+        }
+    
+
+
+
+    .main-div-right{
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 5%;
+    }
+    
+        .main-div-right .header{
+            font-family: Roboto-Light;
+            font-size: 1.4vw;
+            text-align: center;
+            margin: 0 15% 3%;
+            letter-spacing: .7;
+        }
+    
+        .main-div-right form{
+            text-align: center;
+            margin: 0 15%;
+        }
+    
+
+
+
+        .main-div-right input{
+            width: 100%;
+            font-size: 2.5vw;
+            background-color: rgb(43, 43, 43, 0.7);
+            border: 1px solid rgb(255,255,255, 0.3);
+            height: 8.3vh;
+            padding-left: 0.8vw;
+        }
+            .main-div-right input:hover {
+                border: 1px solid rgb(255,255,255);
+                background-color: rgb(43, 43, 43) !important;
+                transition: border 1.5s; transition: background-color .5s ease;
+            }
+            .main-div-right input:focus {
+                border: 1px solid rgb(255,255,255);
+                background-color: rgb(43, 43, 43) !important;
+                transition: border 1.5s; transition: background-color .5s ease;
+            }
+            .main-div-right input:first-child{
+                border-radius:5px 5px 0 0;
+            }
+            .main-div-right input:last-child{
+                border-radius: 0 0 5px 5px;
+            }
+            ::placeholder{
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            .submit{
+                background-color: #176daf !important;
+                border: none !important;
+            }
+                .submit:hover{
+                    background-color: #1868a7 !important;
+                    transition: background-color .5s ease;
+                    cursor: pointer;
+                }
+
+
+
+        
+        .main-div-right p{
+            color: rgb(255,255,255,.4);
+            font-size: 1.3vw;
+            text-align: center;
+        }
+            .main-div-right a{
+                color: rgb(255,255,255);
+                text-decoration: none;
+                font-size: 1vw;
+            }
+}
+
+/* END Responsive Queries  */
+/*END Main Content*/
+
+
+
+/*START Footer*/
+
+/*START Desktop css*/
+@media screen and (min-width: 981px){
+
+    .footer-left{
+        font-family: Roboto-Light;
+        width: 49%;
+        text-align: left;
+        display: inline-block;
+    }
+
+        .footer-left h6{
+            font-size: 0.9vw;
+        }
+
+
+
+    .footer-right{
+        font-family: Roboto-Light;
+        width: 50%;
+        text-align: right;
+        display: inline-block;
+    }
+        .footer-right li{
+            font-size: 1.2vw;
+            padding: 1.7%;
+        }
+
+}
+/*END Desktop css*/
+
+
+
+
+/* Start Responsive styles */
+@media screen and (max-width: 980px){
+
+        .footer-left{
+            font-family: Roboto-Light;
+            width: 49%;
+            text-align: left;
+            display: inline-block;
+        }
+
+            .footer-left h6{
+                font-size: 1.6vw;
+            }
+
+
+
+        .footer-right{
+            font-family: Roboto-Light;
+            width: 50%;
+            text-align: right;
+            display: inline-block;
+        }
+            .footer-right li{
+                font-size: 1.9vw;
+                padding: 1.7%;
+            }
+/* End Responsive styles */
+}
+/*END Footer*/
+
+

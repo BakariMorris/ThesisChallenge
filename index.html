@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+        <script>
+            function  toggle(cssSelector, toggleClass){
+                let target = document.querySelector(cssSelector);
+                console.log(target);
+
+                if(target.className == toggleClass){
+                    target.className = "";
+                }else{
+                    target.className = toggleClass;
+                }
+                
+
+            }
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <title>Thesis Code Example</title>
+    </head>
+    <body>
+        <div>
+            <!-- START Header navigation-->
+            <div class="menu">
+                    <!--Logo-->
+                    <div class="logo">
+                        <p>Stamp</p>
+                    </div>
+
+                    <div id="mobile-menu" onclick="toggle('#mobile-menu', 'active'); toggle('#middle-menu', 'hidden')";>
+                        <div class="menu-bars"></div>
+                        <div class="menu-bars"></div>
+                        <div class="menu-bars"></div>
+                    </div>
+
+                    <div class="link-menu">
+                        <nav id="middle-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Integrations</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Pricing</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- END Header navigation-->
+                
+            <!-- START main content-->
+                <div class="main-div">
+
+                    <div class="main-div-left">
+                        
+                        <h1 class="header">Simple Way to Organize Your Inspirations</h1>
+                        
+                        <p class="content">I think what motivates people is not great hate, but great love for other people.</p>
+                    </div>
+                    
+
+                    <div class="main-div-right">
+
+                        <h3 class="header">SIGN UP FOR FREE</h3>
+
+                        <form action="#" method="post">
+                            <input type="text" placeholder="Name" />
+                            <input type="email" placeholder="E-mail" />
+                            <input type="password" placeholder="Password" />
+                            <input class="submit" type="submit" value="Sign up >"/>
+                        </form>
+
+                        <p>By clicking "Sign up" I agree to our <br>
+                            <b></b><a href="#">Terms of Service</a></b></p>
+                    </div>
+                </div>
+            <!-- END main content-->
+
+            <!--Start Footer-->
+            <footer>
+                <div class="footer-left">
+                    <h6>@2016 Stamp. All Rights Reserved</h6>
+                </div>
+                <div class="footer-right">
+                    <ul>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Help</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Use</a>
+                        </li>
+                        <li> 
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+            <!--End Footer-->
+
+    </body>
+</div>
+</html>
